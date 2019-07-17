@@ -1,0 +1,45 @@
+.seoul-background {
+  background-image: url("https://i.ytimg.com/vi/ZVcJVmyjhyw/maxresdefault.jpg");
+  background-size: cover;
+}
+
+.busan-background {
+  background-image: url("https://www.skadden.com/-/media/images/offices/city_seoul_1440x600_1c.jpg");
+  background-size: cover;
+}
+
+.toursit-spots {
+  border: double;
+}
+
+.map-columns {
+  border: double;
+  border-style: none double double double;
+  padding: 1rem;
+}
+.LightCoral {
+  color: #f08080;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.beige-background {
+  background-color:#FFEFD5;
+}
+
+.footer {
+  padding: 3rem 1.5rem 3rem
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+}
+
+.place-descriptions {
+  overflow-y: auto; 
+  height: 400px;
+}
