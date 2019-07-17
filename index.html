@@ -1,27 +1,107 @@
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>berlin-tourism</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-  <style type="text/css">
-  	/* Add your CSS classes below */
-
-  </style>
-</head>
-
-<body>
+<html>
+  <head>
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- Leaflet (for the map)  -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Our Files -->
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
+    <script type='text/javascript' src='./scripts.js'></script>
+  </head>
   
-  <section class="section">
+  <body class="beige-background">
+    <section class="hero is-primary is-fullheight busan-background">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Seoul
+          </h1>
+          <h2 class="subtitle">
+            서울
+          </h2>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
       <div class="container">
-        <h1 class="title">berlin-tourism</h1>
-        <h2 class="subtitle">
-          berlin-tourism subtitle
+        <h1 class="title">Welcome to SEOUL</h1>
+        <h2 class="sub-title">
+          Explore Seoul holidays and discover the best time and places to visit.
+          <p class="LightCoral"><strong>서울에 오신 것을 환영합니다 ❤ ❤  </strong></p>
         </h2>
       </div>
     </section>
 
-  <script src="js/scripts.js">
-  	/* Add your Javascript below */
-  </script>
-</body>
+    <div class="columns toursit-spots">
+      <div class="column">
+      </div>
+      <div class="column">
+        Bukchon Hanok Village
+        <img src="https://static.geo.de/bilder/63/39/74792/article_image_big/bukchon-hanok-village-suedkorea-f-58926622.jpg" alt="Gyeongbokgung">
+        <p>Bukchon Hanok Village is an actual neighborhood that is home to hundreds of traditional houses that are called hanok.</p>
+        <p>“Bukshon” translates to “northern village” and is one of Seoul’s most popular landmarks.</p>
+        <P>The village is surrounded by Gyeongbokgung Palace, Changdeokgung Palace, and Jongmyo Shrine.</p>
+        <p>
+          Open hours: Monday-Saturday 10-17:00 Admission: Free Language of services and tours are offered in Korean, English, Japanese and Chinese.</P>
+        </p>
+      </div>
+
+      <div class="column">
+        Nami Island
+        <img src="https://cdn.sweetescape.com/images/cities/nami-island/cover/4bfc463d-d386-4004-86a5-84157060fdb9-1920.jpg" alt=N amiIsland>
+        <p>Namiseom Island was created because of the construction of Cheonpyeong Dam.</p>
+        <P> Is lies on top of the grace of General Nami, who led a great victory against rebels in the 13th year of the 7th king of the Joseon Dynasty, King Sejo (who ruled from 1455-1468).</P>
+        <P>The island is approximately 63 km away from Seoul, towards Chuncheon. It’s famous for its beautifu</p>
+
+        <p>Things to do: camping, biking, boat tours, swimming, water skiing, theme park, roller skating, zipline, cafes, gift shops</P>
+        <p>Admission fees: General rate: 13,000 won, Discounted Rate: 10,000 won Special Rate: 7,000</P>
+      </div>
+      <div class="column">
+        N Seoul Tower
+        <img src="https://dunujclut7631.cloudfront.net/images/09010000eum7kf9kcg" alt=N seoultower>
+        <p>N Seoul Tower is one of the tallest towers in Asia, with the top being 480 meters above sea level.</P>
+        <p>In 1969, the tower was first established as a broadcasting tower to send out TV and radio signals.</P>
+        <P>Nowadays, it has become one of the representative landmarks and multi-cultural venues in Seoul.</P>
+
+        <P>Admission fees: Individual Admission Ticket - Observatory: Adults 10,000 won / Children 8,000 won - Hello Kitty Island: Adults 8,000 won / Children 7,000 won</P>
+
+        <P>Open Hours: open all year round, Monday-Friday 10:00-23:00 Saturday 10:00-24:00 Sunday 10:00-23:00</P>
+      </div>
+      <div class="column">
+      </div>
+    </div>
+    
+    <div class="columns map-columns">
+        <div class="column place-descriptions" >
+            <div class="tile is-ancestor">
+                <div class="tile is-12 is-vertical is-parent" id="map_descriptions">
+                  <!-- Automatically filled -->
+                </div>
+              </div>
+        </div>
+        <div class="column" id="map-div">
+            <div id="map" class="map"></div>
+        </div>
+      </column>
+    </div>
+
+    <footer class="footer beige-background">
+      <p>For your travel convenience, open this 
+        <a href="https://www.tommyooi.com/seoul-attractions-travel-guide/">Seoul Metro Map</a> 
+        on your phone so you wont need a metro map. Follow us on our travels in different places on<strong> Instagram</strong>: <a
+        href=https://www.instagram.com/tommyooi88/>Tommy Ooi
+      </a> & <a href=https://www.instagram.com/ceciliablack/> Cecilia Black</a>
+      </p>
+    </footer>
+  </body>
+
 </html>
